@@ -1,0 +1,542 @@
+{
+  "name": "Fire Response",
+  "intents": [
+    {
+      "intent": "numbers",
+      "examples": [
+        {
+          "text": "0"
+        },
+        {
+          "text": "1"
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "3"
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "5"
+        }
+      ],
+      "description": "any integer"
+    },
+    {
+      "intent": "General_Ending",
+      "examples": [
+        {
+          "text": "I'm leaving now"
+        },
+        {
+          "text": "It was nice chatting with you"
+        },
+        {
+          "text": "Ok goodbye"
+        },
+        {
+          "text": "See you later"
+        },
+        {
+          "text": "I d like to stop doing this"
+        },
+        {
+          "text": "I want to quit"
+        },
+        {
+          "text": "Bye bye"
+        },
+        {
+          "text": "I'm done"
+        },
+        {
+          "text": "Im done"
+        },
+        {
+          "text": "Im good thank you"
+        },
+        {
+          "text": "Get lost"
+        },
+        {
+          "text": "Go away"
+        },
+        {
+          "text": "Go off"
+        },
+        {
+          "text": "Going now"
+        },
+        {
+          "text": "Good. bye."
+        },
+        {
+          "text": "Goodbye"
+        },
+        {
+          "text": "Have a nice day?"
+        },
+        {
+          "text": "Hey bot go away"
+        },
+        {
+          "text": "I am leaving"
+        },
+        {
+          "text": "I am out of here"
+        },
+        {
+          "text": "I have got to go"
+        },
+        {
+          "text": "See you"
+        },
+        {
+          "text": "Shut up"
+        },
+        {
+          "text": "Stop doing this"
+        },
+        {
+          "text": "Stop talking to me"
+        },
+        {
+          "text": "Thank you for your time"
+        },
+        {
+          "text": "Thanks, bye!"
+        },
+        {
+          "text": "Thanks very much, bye!"
+        },
+        {
+          "text": "That is all"
+        },
+        {
+          "text": "That's everything"
+        },
+        {
+          "text": "Time to go"
+        },
+        {
+          "text": "Bye now"
+        },
+        {
+          "text": "Catch you later"
+        },
+        {
+          "text": "Cya later"
+        },
+        {
+          "text": "End trial"
+        },
+        {
+          "text": "Ending this session"
+        },
+        {
+          "text": "Finished now, good bye"
+        }
+      ],
+      "description": "End the conversation."
+    },
+    {
+      "intent": "Yes",
+      "examples": [
+        {
+          "text": "y"
+        },
+        {
+          "text": "yea"
+        },
+        {
+          "text": "yah"
+        },
+        {
+          "text": "yeh"
+        },
+        {
+          "text": "yuh"
+        },
+        {
+          "text": "yeah"
+        },
+        {
+          "text": "ya"
+        },
+        {
+          "text": "yyes"
+        },
+        {
+          "text": "yees"
+        },
+        {
+          "text": "Yess"
+        },
+        {
+          "text": "yes"
+        }
+      ]
+    },
+    {
+      "intent": "General_Greetings",
+      "examples": [
+        {
+          "text": "How is it going?"
+        },
+        {
+          "text": "Good day"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "Good to see you"
+        },
+        {
+          "text": "Greetings"
+        },
+        {
+          "text": "Have you been well?"
+        },
+        {
+          "text": "Hello Agent"
+        },
+        {
+          "text": "Hello I am looking for some help here"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hey how are you doing"
+        },
+        {
+          "text": "Hey there all"
+        },
+        {
+          "text": "Hey there"
+        },
+        {
+          "text": "Hey twin"
+        },
+        {
+          "text": "Hey you"
+        },
+        {
+          "text": "Hi advisor"
+        },
+        {
+          "text": "Hi there"
+        },
+        {
+          "text": "How are things going?"
+        },
+        {
+          "text": "How are you today?"
+        },
+        {
+          "text": "How have you been?"
+        },
+        {
+          "text": "How r u?"
+        },
+        {
+          "text": "Looking good eve"
+        },
+        {
+          "text": "Ok take me back"
+        },
+        {
+          "text": "What's new?"
+        },
+        {
+          "text": "What's up?"
+        },
+        {
+          "text": "Who is this?"
+        },
+        {
+          "text": "You there"
+        }
+      ],
+      "description": "Greet the bot."
+    },
+    {
+      "intent": "No",
+      "examples": [
+        {
+          "text": "na"
+        },
+        {
+          "text": "noo"
+        },
+        {
+          "text": "nop"
+        },
+        {
+          "text": "naw"
+        },
+        {
+          "text": "nope"
+        },
+        {
+          "text": "nah"
+        },
+        {
+          "text": "no"
+        },
+        {
+          "text": "n"
+        }
+      ]
+    },
+    {
+      "intent": "address",
+      "examples": [
+        {
+          "text": "aaaaaaaaaaaaaa"
+        },
+        {
+          "text": "aaa"
+        }
+      ],
+      "description": "aaaaaaaa"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Address",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "get which location they are going to",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you! Hope you reach the location safely. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1558160105585",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Anything else"
+      },
+      "conditions": "#address",
+      "dialog_node": "node_9_1558160187324"
+    },
+    {
+      "type": "standard",
+      "title": "they know location",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Provide your location in Address, Street, City, State, Zipcode format or respond with no to go back.  "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1558157923538",
+      "metadata": {},
+      "conditions": "#Yes",
+      "dialog_node": "node_5_1558158965019",
+      "previous_sibling": "node_10_1558161202877"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "we're getting you location from your phone"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1558157923538",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1558160105585"
+      },
+      "conditions": "#No",
+      "dialog_node": "node_10_1558161202877"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A fire is in your area, prepare to evacuate if necessary. Stay safe. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1558157871147",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Anything else"
+      },
+      "conditions": "#No",
+      "dialog_node": "node_3_1558157956369",
+      "previous_sibling": "node_2_1558157923538"
+    },
+    {
+      "type": "standard",
+      "title": "ask about location",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do you know your location?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1558157871147",
+      "metadata": {},
+      "conditions": "#Yes",
+      "dialog_node": "node_2_1558157923538"
+    },
+    {
+      "type": "standard",
+      "title": "give them nearest locations",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "NEAREST THings hehe. Which location do you plan to go to?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1558158965019",
+      "metadata": {},
+      "conditions": "#address",
+      "dialog_node": "node_8_1558160105585",
+      "previous_sibling": "node_7_1558159184434"
+    },
+    {
+      "type": "standard",
+      "title": "return bc do not know",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1558158965019",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1558157923538"
+      },
+      "conditions": "#No",
+      "dialog_node": "node_7_1558159184434"
+    },
+    {
+      "type": "standard",
+      "title": "End",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Goodbye"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_1_1558157871147"
+    },
+    {
+      "type": "standard",
+      "title": "opening",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your area is in an emergency.  Do you need to be relocated? respond with yes or no."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "node_1_1558157871147"
+    }
+  ],
+  "workspace_id": "b535fa26-a948-4bb5-9e66-5201365cee83",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
