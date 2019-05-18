@@ -1,0 +1,42 @@
+[
+    {
+      "name": "Estancia La Jolla Hotel & Spa",
+      "location": " 9700 N Torrey Pines Rd, La Jolla, CA 92037",
+      "spaces": "158",
+      "website": "https://meritagecollection.com/estancia-la-jolla?nck=8554307503",
+      "price": "$116.61",
+      "contact": "6195038428"
+    },
+    {
+      "name": "The Lodge Torrey Pines",
+      "location": " 11480 N Torrey Pines Rd, La Jolla, CA 92037",
+      "spaces": "18",
+      "website": "https://www.lodgetorreypines.com/",
+      "price": "$116.61",
+      "contact": "619042628"
+    },
+    {
+      "name": "Hilton La Jolla",
+      "location": "10950 N Torrey Pines Rd, La Jolla, CA 92037",
+      "spaces": "208",
+      "website": "https://www3.hilton.com/en/hotels/california/hilton-la-jolla-torrey-pines-SANTPHH/index.html?SEO_id=GMB-HI-SANTPHH",
+      "price": "$100.9",
+      "contact": "6191432428"
+    },
+    {
+      "name": "Hyatt Regency La Jolla",
+      "location": "3777 La Jolla Village Dr, San Diego, CA 92122",
+      "spaces": "208",
+      "website": "https://www.hyatt.com/en-US/hotel/california/hyatt-regency-la-jolla-at-aventine/jolla?src=corp_lclb_gmb_seo_nam_jolla",
+      "price": "$140.7",
+      "contact": "6199872428"
+    },
+    {
+      "name": "Sheraton La Jolla",
+      "location": "3299 Holiday Ct, La Jolla, CA 92037",
+      "spaces": "208",
+      "website": "https://www.marriott.com/hotels/travel/sanjs-sheraton-la-jolla-hotel/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2",
+      "price": "$140.7",
+      "contact": "6199872428"
+    }
+]
