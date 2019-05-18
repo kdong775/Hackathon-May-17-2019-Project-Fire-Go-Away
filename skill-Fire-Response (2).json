@@ -1,0 +1,401 @@
+{
+  "name": "Fire Response",
+  "intents": [
+    {
+      "intent": "numbers",
+      "examples": [
+        {
+          "text": "3"
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "0"
+        },
+        {
+          "text": "1"
+        },
+        {
+          "text": "2"
+        }
+      ],
+      "description": "any integer"
+    },
+    {
+      "intent": "Yes",
+      "examples": [
+        {
+          "text": "yees"
+        },
+        {
+          "text": "yyes"
+        },
+        {
+          "text": "ya"
+        },
+        {
+          "text": "yeah"
+        },
+        {
+          "text": "yes"
+        },
+        {
+          "text": "y"
+        },
+        {
+          "text": "yea"
+        },
+        {
+          "text": "yah"
+        },
+        {
+          "text": "yeh"
+        },
+        {
+          "text": "yuh"
+        },
+        {
+          "text": "Yess"
+        }
+      ]
+    },
+    {
+      "intent": "No",
+      "examples": [
+        {
+          "text": "na"
+        },
+        {
+          "text": "n"
+        },
+        {
+          "text": "no"
+        },
+        {
+          "text": "nah"
+        },
+        {
+          "text": "nope"
+        },
+        {
+          "text": "naw"
+        },
+        {
+          "text": "nop"
+        },
+        {
+          "text": "noo"
+        }
+      ]
+    },
+    {
+      "intent": "address",
+      "examples": [
+        {
+          "text": "9500 Gilman Dr, La Jolla, CA, 92093"
+        },
+        {
+          "text": "9500 Gilman Dr, La Jolla"
+        },
+        {
+          "text": "9500 Gilman Dr"
+        },
+        {
+          "text": "Estancia La Jolla Hotel and Spa"
+        },
+        {
+          "text": "Estancia La Jolla Hotel & Spa"
+        },
+        {
+          "text": "9700 N Torrey Pines Rd, La Jolla, CA 92037"
+        },
+        {
+          "text": "The Lodge Torrey Pines"
+        },
+        {
+          "text": "11480 N Torrey Pines Rd, La Jolla, CA 92037"
+        },
+        {
+          "text": "11480 N Torrey Pines Rd"
+        },
+        {
+          "text": "9700 N Torrey Pines Rd"
+        },
+        {
+          "text": "Hilton La Jolla"
+        },
+        {
+          "text": "Hyatt La Jolla"
+        },
+        {
+          "text": "3777 La Jolla Village Dr, San Diego, CA 92122"
+        },
+        {
+          "text": "3777 La Jolla Village Dr"
+        },
+        {
+          "text": "Hyatt Regency La Jolla"
+        },
+        {
+          "text": "10950 N Torrey Pines Rd, La Jolla, CA 92037"
+        },
+        {
+          "text": "10950 N Torrey Pines Rd"
+        },
+        {
+          "text": "Sheraton La Jolla"
+        },
+        {
+          "text": "3299 Holiday Ct, La Jolla, CA, 92037"
+        },
+        {
+          "text": "9500 Gilman"
+        }
+      ],
+      "description": "User locations and selection choices"
+    }
+  ],
+  "entities": [],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "get which location they are going to",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you! Your choice has been recorded and the appropriate resources have been informed of your future arrival. We hope that you will reach the location safely. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1558160105585",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Anything else"
+      },
+      "conditions": "#address",
+      "dialog_node": "node_9_1558160187324"
+    },
+    {
+      "type": "standard",
+      "title": "they know location",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Provide your location in Address, Street, City, State, Zipcode format or respond with no to go back.  "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1558157923538",
+      "metadata": {},
+      "conditions": "#Yes",
+      "dialog_node": "node_5_1558158965019",
+      "previous_sibling": "node_10_1558161202877"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We're getting your location from your phone and locating nearby safe areas."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1558157923538",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1558160105585"
+      },
+      "conditions": "#No",
+      "dialog_node": "node_10_1558161202877"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A fire is in your area, prepare to evacuate if necessary. Stay safe. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1558157871147",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Anything else"
+      },
+      "conditions": "#No",
+      "dialog_node": "node_3_1558157956369",
+      "previous_sibling": "node_2_1558157923538"
+    },
+    {
+      "type": "standard",
+      "title": "ask about location",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do you know your location?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1558157871147",
+      "metadata": {},
+      "conditions": "#Yes",
+      "dialog_node": "node_2_1558157923538"
+    },
+    {
+      "type": "standard",
+      "title": "give them nearest locations",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are some of the nearest locations safe from fire. Please select one of them:"
+              },
+              {
+                "text": "Estancia La Jolla Hotel & Spa; 9700 N Torrey Pines Rd, La Jolla, CA 92037; Spaces available: 73"
+              },
+              {
+                "text": "The Lodge Torrey Pines; 11480 N Torrey Pines Rd, La Jolla, CA 92037; Spaces available: 4"
+              },
+              {
+                "text": "Hilton La Jolla; 10950 N Torrey Pines Rd, La Jolla, CA 92037; Spaces available: 33"
+              },
+              {
+                "text": "Hyatt Regency La Jolla; 3777 La Jolla Village Dr, San Diego, CA 92122; Spaces available: 21"
+              },
+              {
+                "text": "Sheraton La Jolla; 3299 Holiday Ct, La Jolla, CA 92037; Spaces available: 49"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1558158965019",
+      "metadata": {},
+      "conditions": "#address",
+      "dialog_node": "node_8_1558160105585",
+      "previous_sibling": "node_7_1558159184434"
+    },
+    {
+      "type": "standard",
+      "title": "return bc do not know",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1558158965019",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1558157923538"
+      },
+      "conditions": "#No",
+      "dialog_node": "node_7_1558159184434"
+    },
+    {
+      "type": "standard",
+      "title": "End",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Goodbye"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_1_1558157871147"
+    },
+    {
+      "type": "standard",
+      "title": "opening",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your area is in an emergency.  Do you need to be relocated? Please respond with yes or no."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "node_1_1558157871147"
+    }
+  ],
+  "workspace_id": "b535fa26-a948-4bb5-9e66-5201365cee83",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
